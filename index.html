@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+</head>
+<body>
+  <script >
+    function appendToDisplay(input){
+      let display = document.getElementById("display");
+
+      display.value = display.value+input;
+
+    }
+    function clearDisplay(){
+      display.value = "";
+    }
+    function calculate(){
+      display.value = eval(display.value);
+    }
+    function back() {
+    var value = document.getElementById("display").value;
+    document.getElementById("display").value = value.substr(0, value.length - 1);
+}</script>  
+    
+    
+    
+  <div class="calculator">
+   
+    <div class="display-box">
+      <div class="title"><p>
+        Welcome to Calculator
+    </p></div>
+        
+      <input  id="display" placeholder="0"></div>
+    
+    <div class="buttons">
+        <button class="operator raw"  onclick="clearDisplay()">AC</button>
+      <button class="number raw" onclick="display.value=display.value.toString().slice(0,-1)"><--</button>
+      <button class="number raw" onclick="appendToDisplay('%')">%</button>
+      <button class="operator" onclick="appendToDisplay('/')">÷</button>
+      <button class="number" onclick="appendToDisplay('7')">7</button>
+      <button class="number" onclick="appendToDisplay('8')">8</button>
+      <button class="number" onClick="appendToDisplay('9')">9</button>
+      <button class="operator"onclick="appendToDisplay('*')">X</button>
+      <button class="number" onclick="appendToDisplay('4')">4</button>
+      <button class="number" onclick="appendToDisplay('5')">5</button>
+      <button class="number" onclick="appendToDisplay('6')">6</button>
+      <button class="operator"onclick="appendToDisplay('-')" >-</button>
+      <button class="number" onclick="appendToDisplay('1')">1</button>
+      <button class="number" onclick="appendToDisplay('2')">2</button>
+      <button class="number" onclick="appendToDisplay('3')">3</button>
+      <button class="operator" onclick="appendToDisplay('+')">+</button>
+      <button class="number" onclick="appendToDisplay('0')">0</button>
+      <button class="number" onclick="appendToDisplay('00')">00</button>
+      <button class="number" onclick="appendToDisplay('.')" >.</button>
+      <button class="operator" onclick="calculate()">=</button>
+      
+    </div>
+  </div>
+</body>
+</html>
